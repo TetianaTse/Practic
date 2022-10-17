@@ -2,6 +2,8 @@
 
 let number;
 let div;
+let sum = 0;
+let amount = 0;
 
 do {
     number = parseInt(prompt('Введите любое натуральное число:'));
@@ -12,27 +14,11 @@ document.write('Делителями числа ' + number + ' являются:
 for (div = 1; div <= number; div++) {
     if (number % div === 0) {
       document.write(div + "; ");
-    } 
-  } 
-
-document.write(' Количество четных делителей числа ' + number + ': ');
-let amount = 0;
-for (div = 1; div <= number; div++) {
-    if (number % div === 0) {
       if (div % 2 === 0) {
         amount += 1;
+        sum+=div; 
       }
     } 
-  }
-document.write(amount + '. ');
-
-document.write('Сумма четных делителей числа ' + number + ': ');
-let sum = 0;
-for (div = 1; div <= number; div++) {
-    if (number % div === 0) {
-      if (div % 2 === 0) {
-        sum+=div;
-      }
-    } 
-  }
-document.write(sum + '. ');
+  } 
+document.write('<br>Количество четных делителей числа ' + number + ': ' + amount + '.<br>');
+document.write('Сумма четных делителей числа ' + number + ': ' + sum + '. ');

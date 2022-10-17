@@ -8,7 +8,5 @@ let maxValue = 500;
 for (a; a <= 500; a++) {
     sum+=a;
     mid = sum/maxValue;
-  if (a === maxValue) {
-    document.write("Среднее арифметическое всех целых чисел от 1 до 500" + " равно " + mid + "!");
-  }
 }
+document.write("Среднее арифметическое всех целых чисел от 1 до 500" + " равно " + mid + "!");
